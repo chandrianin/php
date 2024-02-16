@@ -13,3 +13,5 @@ services:
 # ну вот)
   nastuha:
     image: php:8.3-fpm
+    volumes:
+      - ./code:/code
