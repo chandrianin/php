@@ -6,3 +6,10 @@ services:
       - "8080:80"
     volumes:
       - ./code:/code
+      - ./site.conf:/etc/nginx/conf.d/site.conf
+    links:
+      - nastuha
+# в видео было сказано, что вместо php можно поставить любое другое название
+# ну вот)
+  nastuha:
+    image: php:8.3-fpm
