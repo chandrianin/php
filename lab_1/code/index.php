@@ -150,3 +150,17 @@ foreach ($sumElementsArray as $element) {
 // проверка
 //echo $count;
 
+
+// ПУНКТ №15
+
+function printStringReturnNumber($inputString)
+{
+    echo $inputString;
+    return intval($inputString);
+}
+
+$myNum = printStringReturnNumber("12");
+
+function increaseEnthusiasm(){
+
+}
