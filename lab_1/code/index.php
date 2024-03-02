@@ -69,3 +69,84 @@ $answer -= 2;
 $answer /= 2;
 $mathAnswer = $answer - $myNum;
 echo "Если справа единица, то все хорошо: $mathAnswer<br>";
+
+
+// ПУНКТ №14
+
+$a = 10;
+$b = 3;
+$divisionRemainder = $a % $b;
+echo "Остаток от деления равен $divisionRemainder";
+if ($divisionRemainder == 0) {
+    echo "$a делится на $b без остатка<br>";
+} else {
+    echo "$a делится на $b с остатком<br>";
+}
+
+$pow = pow(2, 10);
+$sqrt1 = sqrt(245);
+$tempArray = [4, 2, 5, 19, 13, 0, 10];
+$sum = 0;
+foreach ($tempArray as $i) {
+    $sum += $i;
+}
+
+$sqrt2 = round(sqrt(379));
+$sqrt3 = round(sqrt(379), 1);
+$sqrt4 = round(sqrt(379), 2);
+$roundValues = [];
+$roundValues["floor"] = floor(sqrt(579));
+$roundValues["ceil"] = ceil(sqrt(579));
+//echo $roundValues["floor"]; // проверил - работает
+//echo "<br>";
+//echo $roundValues["ceil"];
+
+$minNumber = min(4, -2, 5, 19, -130, 0, 10);
+$maxNumber = max(4, -2, 5, 19, -130, 0, 10);
+
+echo "Случайно число от 1 до 100: " . rand(1, 100) . "<br>";
+$tempArray = [];
+foreach (range(0, 9) as $item) {
+    $tempArray[] = rand(1, 100);
+//    echo $tempArray[$item] . "<br>"; // проверка - работает
+}
+
+$module1 = abs(($a = 1) - ($b = 2));
+$module2 = abs(($a = 24) - ($b = 12));
+//echo $module1 . " " . $module2; // проверка
+
+$tempArray = [1, 2, -1, -2, 3, -3];
+foreach (range(0, count($tempArray) - 1) as $i) {
+    if ($tempArray[$i] < 0) {
+        $tempArray[$i] = abs($tempArray[$i]);
+    }
+    // проверка
+    //    echo $tempArray[$i] . " ";
+}
+
+$remaindersArray = [];
+$number = 666;
+foreach (range(1, $number) as $remainder) {
+    if ($number % $remainder == 0) {
+        $remaindersArray[] = $remainder;
+    }
+}
+// проверка:
+//foreach ($remaindersArray as $item) {
+//    echo $item . " ";
+//}
+
+$sumElementsArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+$count = 0;
+$sum = 0;
+foreach ($sumElementsArray as $element) {
+    $sum += $element;
+    $count++;
+    if ($sum > 10) {
+        break;
+    }
+
+}
+// проверка
+//echo $count;
+
