@@ -11,7 +11,7 @@ services:
       - nastuha
 # в видео было сказано, что вместо php можно поставить любое другое название
 # ну вот)
-  nastuha:
+  nastya:
     image: php:8.3-fpm
     volumes:
       - ./code:/code
