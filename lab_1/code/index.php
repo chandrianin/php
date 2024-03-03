@@ -212,4 +212,66 @@ function digitsAddition($inputNumber)
     }
 }
 
-echo digitsAddition($longNumber);
+echo digitsAddition($longNumber) . "<br>";
+
+
+// ПУНКТ №17
+
+// Заполните массив следующим образом: в первый элемент запишите 'x', во второй 'xx', в третий 'xxx' и так далее
+$tempArray = ["x"];
+for ($i = 1; $i < 10; $i++) {
+    $tempArray[] = $tempArray[$i - 1] . "x";
+}
+
+function arrayFil($inputString, $count)
+{
+    $tempArray = [$inputString];
+    for ($i = 1; $i < $count; $i++) {
+        $tempArray[] = $tempArray[$i - 1] . $inputString;
+    }
+}
+
+$tempArray = [[1, 2, 3], [4, 5], [6]];
+$sum = 0;
+foreach ($tempArray as $bigArray) {
+    foreach ($bigArray as $item) {
+        $sum += $item;
+    }
+}
+//echo $sum;
+
+$tempArray = [];
+for ($i = 0; $i < 3; $i++) {
+    $min = 0;
+    $max = 0;
+    if ($i == 0) {
+        $min = 1;
+        $max = 3;
+    } else if ($i == 1) {
+        $min = 4;
+        $max = 6;
+    } else {
+        $min = 7;
+        $max = 9;
+    }
+    $tempArray[] = [];
+    foreach (range($min, $max) as $item) {
+        $tempArray[$i][] = $item;
+    }
+}
+//echo count($tempArray[0]);
+
+$tempArray = [2, 5, 3, 9];
+$result = $tempArray[0] * $tempArray[1] + $tempArray[2] * $tempArray[3];
+echo $result . "<br>";
+
+$user = ['name' => "a", 'surname' => "b", 'patronymic' => "c"];
+echo $user["surname"] . " " . $user['name'] . " " . $user['patronymic'] . "<br>";
+
+$date = ['year' => 1, 'day' => 1, 'month' => 1];
+echo $date["year"] . " " . $date['month'] . " " . $date['day'] . "<br>";
+
+$tempArray = ['a', 'b', 'c', 'd', 'e'];
+echo count($tempArray) . "<br>";
+
+echo $tempArray[count($tempArray) - 1] . " " . $tempArray[count($tempArray) - 2] . "<br>";
