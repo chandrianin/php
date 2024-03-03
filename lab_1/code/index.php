@@ -1,5 +1,16 @@
 <?php
 
+
+/**README:
+ *Каждый пункт обозначен следующей записью
+ *<p>// ПУНКТ №n</p>
+ *<p>Между собой пункты разделены двумя пустыми строками,
+ * задания внутри пунктов разделены одной пустой строкой</p>
+ *<p>Названия многих переменных изменены по сравнению с <a href="https://docs.google.com/document/d/1SBLXePwd46nyNNLZ7AuzUBiQirLzBkPEqmIMu_y_xq4/edit">заданием</a></p>
+ *<p>Для оптимального просмотра стоит использовать браузер</p>
+ */
+
+
 // подключаю свой шрифт для браузера, так как стандартный выглядит ужасно
 echo '<style>@font-face {
     font-family: "googleSans";
@@ -16,13 +27,9 @@ font-family: "googleSans", sans-serif;
 
 /* Imagine a lot of code here */
 $very_bad_unclear_name = "15 chicken wings";
-
-
 // Write your code here:
 $order = &$very_bad_unclear_name;
 $order .= " PU PU PU";
-
-
 // Don't change the line below
 echo "\nYour order is: $very_bad_unclear_name.";
 
@@ -312,3 +319,34 @@ if (10 > $age or $age > 99) {
 
 $tempArray = [12, 23, 12, 12];
 if (count($tempArray) == 3) echo count($tempArray) . "<br>";
+
+
+// ПУНКТ №19
+
+$tempString = "x";
+foreach (range(1, 20) as $width) {
+    echo $tempString . "<br>";
+    $tempString .= "x";
+}
+
+// ПУНКТ №20
+
+$tempArray = [1, 2, 3, 4, 5, 6];
+$average = array_sum($tempArray) / count($tempArray);
+echo $average . "<br>";
+
+$sum = array_sum(range(1, 100));
+echo $sum . "<br>";
+
+$tempArray = [1, 2, 4, 5];
+$tempArray = array_map('sqrt', $tempArray);
+//echo $tempArray[1];
+
+$arrayKeys = range('a', 'z');
+$arrayValues = range(1, 26);
+$tempArray = array_combine($arrayKeys, $arrayValues);
+echo $tempArray['a'] . " " . $tempArray['z'] . "<br>";
+
+$tempString = '1234567890';
+$sum = array_sum(str_split($tempString, 2));
+echo $sum;
