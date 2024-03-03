@@ -161,6 +161,55 @@ function printStringReturnNumber($inputString)
 
 $myNum = printStringReturnNumber("12");
 
-function increaseEnthusiasm(){
 
+// ПУНКТ №16
+
+function increaseEnthusiasm($inputString)
+{
+    return $inputString . "!";
 }
+
+echo "<br>" . increaseEnthusiasm("testString") . "<br>";
+
+function repeatThreeTimes($inputString)
+{
+    return $inputString . $inputString . $inputString;
+}
+
+echo repeatThreeTimes("testString") . "<br>";
+
+echo increaseEnthusiasm(repeatThreeTimes("testString")) . "<br>";
+
+function cut($inputString, $charsCount = 10)
+{
+    return substr($inputString, 0, $charsCount);
+}
+
+echo cut("veryVeryBigMessage") . "<br>";
+
+function printArrayElements($array, $index = 0)
+{
+    echo $array[$index++] . " ";
+    if ($index < count($array)) {
+        printArrayElements($array, $index);
+    }
+}
+
+printArrayElements([1, 2, 3, 4, 5, 7]);
+echo "<br>";
+
+$longNumber = 12345;
+function digitsAddition($inputNumber)
+{
+    $sum = 0;
+    foreach (str_split("$inputNumber") as $digit) {
+        $sum += intval($digit);
+    }
+    if ($sum > 9) {
+        return digitsAddition($sum);
+    } else {
+        return $sum;
+    }
+}
+
+echo digitsAddition($longNumber);
