@@ -275,3 +275,40 @@ $tempArray = ['a', 'b', 'c', 'd', 'e'];
 echo count($tempArray) . "<br>";
 
 echo $tempArray[count($tempArray) - 1] . " " . $tempArray[count($tempArray) - 2] . "<br>";
+
+
+// ПУНКТ №18
+
+function firstTrueOrFalse($firstNum, $secondNum)
+{
+    if ($firstNum + $secondNum > 10) {
+        return true;
+    } else return false;
+}
+
+function secondTrueOrFalse($firstNum, $secondNum)
+{
+    if ($firstNum == $secondNum) {
+        return true;
+    } else return false;
+}
+
+if ($count == 0) echo "верно";
+
+$age = rand(1, 100);
+if (10 > $age or $age > 99) {
+    echo "число меньше 10 или больше 99<br>";
+} else {
+    $sum = 0;
+    foreach (str_split("$age") as $digit) {
+        $sum += intval($digit);
+    }
+    if ($sum <= 9) {
+        echo "Сумма цифр однозначна<br>";
+    } else {
+        echo "Сумма цифр двузначна<br>";
+    }
+}
+
+$tempArray = [12, 23, 12, 12];
+if (count($tempArray) == 3) echo count($tempArray) . "<br>";
