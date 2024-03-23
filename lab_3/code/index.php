@@ -50,12 +50,10 @@ echo "<p>$resultString</p>";
 /**<h2>2. Форма. Сессии и Куки</h2>*/
 
 /**<h3>Подпункт a)</h3>*/
-
-echo "<a href='./second_task_a.php' target='_blank'>Task №2.a</a><br>";
+echo "<a href='./second/second_task_a.php' target='_blank'>Task №2.a</a><br>";
 
 /**<h3>Подпункт b)</h3>*/
-
-echo "<a href='./second_task_b.php' target='_blank'>Task №2.b</a>";
+echo "<a href='./second/second_task_b.php' target='_blank'>Task №2.b</a><br>";
 
 /**<h3>Подпункт c</h3>*/
-
+echo "<a href='./second/second_task_c.php' target='_blank'>Task №2.c</a>";

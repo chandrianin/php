@@ -1,11 +1,11 @@
 <!doctype html>
 <head>
     <meta charset="UTF-8">
-    <title>Task №2.a</title>
+    <title>Task №2.b (response)</title>
     <style>
         @font-face {
             font-family: "googleSans";
-            src: url("font/GoogleSans-Regular.ttf") format("ttf");
+            src: url("../font/GoogleSans-Regular.ttf") format("ttf");
         }
 
         * {
@@ -58,7 +58,7 @@
     <?php
     $surName = !empty($_POST['surName']) ? $_POST['surName'] : '';
     $name = !empty($_POST['name']) ? $_POST['name'] : '';
-    $age = !empty($_POST['age']) ? $_POST['age'] : '1';
+    $age = !empty($_POST['age']) ? $_POST['age'] : '';
     ?>
     <p>Ваша фамилия: <?= $surName ?></p>
     <p>Ваше имя: <?= $name ?></p>

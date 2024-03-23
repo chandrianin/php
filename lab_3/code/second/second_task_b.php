@@ -1,11 +1,11 @@
 <!doctype html>
 <head>
     <meta charset="UTF-8">
-    <title>Task №2.a</title>
+    <title>Task №2.b</title>
     <style>
         @font-face {
             font-family: "googleSans";
-            src: url("font/GoogleSans-Regular.ttf") format("ttf");
+            src: url("../font/GoogleSans-Regular.ttf") format("ttf");
         }
 
         * {
@@ -41,7 +41,6 @@
 
         form {
             width: 300px;
-            /*height: 400px;*/
             display: flex;
             flex-wrap: nowrap;
             justify-content: flex-start;
@@ -51,25 +50,12 @@
 
         form * {
             margin-top: 15px;
-            /*min-width: 270px;*/
             max-width: 270px;
         }
 
         label {
             width: 270px;
         }
-
-        /*textarea {*/
-        /*    background: #944949;*/
-        /*    color: #3f0a0a;*/
-
-        /*    margin: 0;*/
-        /*    min-width: 264px;*/
-        /*    max-width: 264px;*/
-        /*    min-height: 250px;*/
-        /*    max-height: 250px;*/
-        /*    border-radius: 7px;*/
-        /*}*/
 
         input[type=text] {
             margin-top: 5px;
@@ -111,7 +97,7 @@
         </label>
         <label>
             Введите Ваш возраст:
-            <input name="age" type="text"placeholder="Возраст">
+            <input name="age" type="text" placeholder="Возраст">
         </label>
         <input type="submit">
     </form>
