@@ -51,9 +51,11 @@ echo "<p>$resultString</p>";
 
 /**<h3>Подпункт a)</h3>*/
 
-echo "<a href='./second_task_a.php' target='_blank'>Task №2.a</a>";
+echo "<a href='./second_task_a.php' target='_blank'>Task №2.a</a><br>";
 
 /**<h3>Подпункт b)</h3>*/
+
+echo "<a href='./second_task_b.php' target='_blank'>Task №2.b</a>";
 
 /**<h3>Подпункт c</h3>*/
 
