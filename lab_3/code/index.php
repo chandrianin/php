@@ -24,7 +24,7 @@ margin-left: 30px;
 /**<h2>1. Регулярные выражения</h2>*/
 
 /**<h3>Подпункт a)</h3>*/
-echo '<h2>1. Регулярные выражения</h2>';
+echo '<h2>Task №1</h2>';
 $stringForSplit = 'ahb acb aeb aeeb adcb axeb';
 $regularExpression = '/a[a-z]{2}b/';
 $results = array();
@@ -51,7 +51,7 @@ echo "<p>$resultString</p>";
 
 /**<h3>Подпункт a)</h3>*/
 
-echo "<a href='./second_task_a.php' target='_blank'>Второе задание</a>";
+echo "<a href='./second_task_a.php' target='_blank'>Task №2.a</a>";
 
 /**<h3>Подпункт b)</h3>*/
 

@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Task №2_a</title>
+    <title>Task №2.a</title>
     <style>
         @font-face {
             font-family: "googleSans";
@@ -13,10 +13,11 @@
             font-family: "googleSans", sans-serif;
             font-size: 23px;
         }
-
+        html {
+            background: #501010;
+        }
         body div {
             width: 300px;
-
             background: #501010;
             border-radius: 15px;
             display: flex;
