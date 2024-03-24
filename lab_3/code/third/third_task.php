@@ -15,13 +15,13 @@
         }
 
         html {
-            background: #641d1d;
+            background: #1C2918;
         }
 
         body div {
             height: auto;
             width: 300px;
-            background: #501010;
+            background: #152011;
             border-radius: 15px;
             display: flex;
             flex-wrap: nowrap;
@@ -49,7 +49,7 @@
 
         body {
             margin-top: 75px;
-            background: #641d1d;
+            background: #1C2918;
             display: flex;
             flex-wrap: nowrap;
             flex-direction: row;
@@ -80,8 +80,8 @@
         }
 
         textarea {
-            background: #944949;
-            color: #3f0a0a;
+            background: #3b4d34;
+            color: #152011;
 
             margin: 5px 0 0 0;
             min-width: 264px;
@@ -92,12 +92,12 @@
         }
 
         textarea::placeholder, input::placeholder {
-            color: #572020;
+            color: #1C2918;
         }
 
         input[type=submit], input[type=email], input[type=text], select {
-            background: #944949;
-            color: #3f0a0a;
+            background: #3b4d34;
+            color: #152011;
             margin: 5px auto 0 auto;
             border-radius: 7px;
             /*margin-bottom: 15px;*/
@@ -113,20 +113,15 @@
             margin-bottom: 0;
         }
 
-        option:checked {
-            background: #310404;
-            color: #944949;
-        }
-
         p, label {
             width: 270px;
             margin: 10px auto;
             text-align: start;
-            color: #944949;
+            color: #3b4d34;
         }
 
         h3 {
-            color: #944949;
+            color: #3b4d34;
         }
     </style>
 </head>

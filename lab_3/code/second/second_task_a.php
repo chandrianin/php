@@ -14,11 +14,11 @@
             font-size: 23px;
         }
         html {
-            background: #641d1d;
+            background: #1C2918;
         }
         body div {
             width: 300px;
-            background: #501010;
+            background: #152011;
             border-radius: 15px;
             display: flex;
             flex-wrap: nowrap;
@@ -29,7 +29,7 @@
 
         body {
             margin-top: 75px;
-            background: #641d1d;
+            background: #1C2918;
             display: flex;
             flex-wrap: nowrap;
             flex-direction: row;
@@ -50,7 +50,6 @@
 
         form * {
             margin-top: 15px;
-            /*min-width: 270px;*/
             max-width: 270px;
         }
 
@@ -59,8 +58,8 @@
         }
 
         textarea {
-            background: #944949;
-            color: #3f0a0a;
+            background: #3b4d34;
+            color: #152011;
 
             margin: 0;
             min-width: 264px;
@@ -71,13 +70,13 @@
         }
 
         textarea::placeholder {
-            color: #572020;
+            color: #1C2918;
 
         }
 
         input[type=submit] {
-            background: #944949;
-            color: #3f0a0a;
+            background: #3b4d34;
+            color: #152011;
             border-radius: 7px;
             margin-bottom: 15px;
         }
@@ -86,7 +85,7 @@
             width: 270px;
             margin: 10px auto;
             text-align: justify;
-            color: #944949;
+            color: #3b4d34;
         }
     </style>
 </head>

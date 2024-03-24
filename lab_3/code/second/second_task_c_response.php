@@ -14,12 +14,12 @@
         }
 
         html {
-            background: #641d1d;
+            background: #1C2918;
         }
 
         body div {
             width: 300px;
-            background: #501010;
+            background: #152011;
             border-radius: 15px;
             display: flex;
             flex-wrap: nowrap;
@@ -30,7 +30,7 @@
 
         body {
             margin-top: 75px;
-            background: #641d1d;
+            background: #1C2918;
             display: flex;
             flex-wrap: nowrap;
             flex-direction: row;
@@ -54,11 +54,11 @@
             margin: 10px auto;
             width: 270px;
             text-align: start;
-            color: #944949;
+            color: #3b4d34;
         }
 
         li {
-            color: #944949;
+            color: #3b4d34;
         }
     </style>
 </head>

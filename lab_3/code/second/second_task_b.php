@@ -14,12 +14,12 @@
         }
 
         html {
-            background: #641d1d;
+            background: #1C2918;
         }
 
         body div {
             width: 300px;
-            background: #501010;
+            background: #152011;
             border-radius: 15px;
             display: flex;
             flex-wrap: nowrap;
@@ -30,7 +30,7 @@
 
         body {
             margin-top: 75px;
-            background: #641d1d;
+            background: #1C2918;
             display: flex;
             flex-wrap: nowrap;
             flex-direction: row;
@@ -59,20 +59,20 @@
 
         input[type=text] {
             margin-top: 5px;
-            background: #944949;
-            color: #3f0a0a;
+            background: #3b4d34;
+            color: #152011;
             border-radius: 7px;
         }
 
         input[type=text]::placeholder {
             margin-top: 0;
             width: 264px;
-            color: #572020;
+            color: #1C2918;
         }
 
         input[type=submit] {
-            background: #944949;
-            color: #3f0a0a;
+            background: #3b4d34;
+            color: #152011;
             border-radius: 7px;
             margin-bottom: 15px;
         }
@@ -80,7 +80,7 @@
         label {
             width: 270px;
             text-align: start;
-            color: #944949;
+            color: #3b4d34;
         }
     </style>
 </head>
