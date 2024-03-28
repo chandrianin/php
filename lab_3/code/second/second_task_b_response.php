@@ -56,12 +56,13 @@
 <body>
 <div>
     <?php
-    $surName = !empty($_POST['surName']) ? $_POST['surName'] : '';
-    $name = !empty($_POST['name']) ? $_POST['name'] : '';
-    $age = !empty($_POST['age']) ? $_POST['age'] : '';
+
+    $_SESSION['surName'] = !empty($_POST['surName']) ? $_POST['surName'] : '';
+    $_SESSION['name'] = !empty($_POST['name']) ? $_POST['name'] : '';
+    $_SESSION['age'] = !empty($_POST['age']) ? $_POST['age'] : '';
     ?>
-    <p>Ваша фамилия: <?= $surName ?></p>
-    <p>Ваше имя: <?= $name ?></p>
-    <p>Ваш возраст: <?= $age ?></p>
+    <p>Ваша фамилия: <?= $_SESSION['surName'] ?></p>
+    <p>Ваше имя: <?= $_SESSION['name'] ?></p>
+    <p>Ваш возраст: <?= $_SESSION['age'] ?></p>
 </div>
 </body>
