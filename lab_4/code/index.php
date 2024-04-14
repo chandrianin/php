@@ -175,7 +175,11 @@
     $client->setApplicationName("testApplicationName");
     $client->setScopes([Google_Service_Sheets::SPREADSHEETS]);
     $client->setAccessType("offline");
-    $client->setAuthConfig(__DIR__ . "/data/credentials.json");
+    try {
+        $client->setAuthConfig(__DIR__ . "/data/credentials.json");
+    } catch (\Google\Exception $e) {
+        echo "<p>Ошибочка вышла</p>";
+    }
     $client->useApplicationDefaultCredentials();
     $client->addScope('https://www.googleapis.com/auth/spreadsheets');
 
