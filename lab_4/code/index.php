@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Task №3</title>
+    <title>Lab №4</title>
     <style>
         @font-face {
             font-family: "googleSans";
@@ -21,7 +21,7 @@
         body div {
             height: auto;
             width: 300px;
-            background: #152011;
+            background: #293c23;
             border-radius: 15px;
             display: flex;
             flex-wrap: nowrap;
@@ -81,7 +81,7 @@
 
         textarea {
             background: #556c4c;
-            color: #152011;
+            color: #293c23;
 
             margin: 5px 0 0 0;
             min-width: 264px;
@@ -97,7 +97,7 @@
 
         input[type=submit], input[type=email], input[type=text], select {
             background: #556c4c;
-            color: #152011;
+            color: #293c23;
             margin: 5px auto 0 auto;
             border-radius: 7px;
             /*margin-bottom: 15px;*/
@@ -160,17 +160,45 @@
         <h3>Описание</h3>
     </div>
     <?php
-    foreach (array('first', 'second', 'other') as $category) {
-        $currentFiles = scandir(__DIR__ . "/categories/$category");
-        foreach ($currentFiles as $file) {
-            if ($file === "." || $file === "..") {
-                continue;
-            } else {
-                $title = substr($file, 0, strlen($file) - 4);
-                $content = file_get_contents(__DIR__ . "/categories/$category/" . "$file");
-                echo "<div><p>$category</p><p>$title</p><p>$content</p></div>";
+
+    require_once "vendor/autoload.php";
+
+    use Google\Client;
+    use Google\Service\Drive;
+    use Google\Service\Sheets\SpreadSheet;
+
+    $apiKey = "AIzaSyCi6n8XQUTmO2nQkLwQucYByK0OQsy8o3g";
+    $clientId = "658150328571-ee9ed21shkuuqsqepse7piikm2fstgsn.apps.googleusercontent.com";
+    $clientSecret = "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";
+
+    $client = new Google_Client();
+    $client->setApplicationName("testApplicationName");
+    $client->setScopes([Google_Service_Sheets::SPREADSHEETS]);
+    $client->setAccessType("offline");
+    $client->setAuthConfig(__DIR__ . "/data/credentials.json");
+    $client->useApplicationDefaultCredentials();
+    $client->addScope('https://www.googleapis.com/auth/spreadsheets');
+
+    $service = new Google_Service_Sheets($client);
+    $spreadsheetId = '1aM_DhSvp7J8lUGVSyRUUFOYtqedjwFDpCp35ILu_LNU';
+
+    try {
+        $range = "sheet";
+        $response = $service->spreadsheets_values->get($spreadsheetId, $range);
+        for ($i = 1; $i < sizeof($response->getValues()); $i++) {
+            $valuesInRow = array();
+            echo "<div>";
+            for ($j = 0; $j < 3; $j++) {
+                if ($j < sizeof($response->getValues()[$i])) {
+                    echo "<p>" . $response->getValues()[$i][$j] . "</p>";
+                } else {
+                    echo "<p></p>";
+                }
             }
+            echo "</div>";
         }
+    } catch (\Google\Service\Exception $e) {
+        echo "Возникла ошибка с получением данных";
     }
     ?>
 </div>
