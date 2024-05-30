@@ -163,25 +163,12 @@
     require_once __DIR__ . '/func.php';
 
     $db = extracted();
-    //var_dump($db->query("SELECT email FROM web.ad"));
     foreach ($db->query("SELECT * FROM web.ad") as $row) {
         $category = $row['category'];
         $title = $row['title'];
         $description = $row['description'];
         echo "<div><p>$category</p><p>$title</p><p>$description</p></div>";
     }
-
-    //    foreach (array('first', 'second', 'other') as $category) {
-    //        $currentFiles = scandir(__DIR__ . "/categories/$category");
-    //        foreach ($currentFiles as $file) {
-    //            if ($file === "." || $file === "..") {
-    //                continue;
-    //            } else {
-    //                $title = substr($file, 0, strlen($file) - 4);
-    //                $content = file_get_contents(__DIR__ . "/categories/$category/" . "$file");
-    //            }
-    //        }
-    //    }
     ?>
 </div>
 </body>

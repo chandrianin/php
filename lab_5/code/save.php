@@ -14,7 +14,6 @@ $inputData[] = !empty($_POST['title']) ? $_POST['title'] : "untitled";
 $inputData[] = $_POST['description'];
 $inputData[] = !empty($_POST['category']) ? $_POST['category'] : "other";
 
-//var_dump($inputData);
 
 $stmt = $db->prepare("INSERT INTO web.ad (email, title, description, category) VALUES (?, ?, ?, ?)");
 $stmt->bind_param("ssss",$inputData[0], $inputData[1], $inputData[2], $inputData[3]);
