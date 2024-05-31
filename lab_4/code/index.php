@@ -163,10 +163,6 @@
 
     require_once "vendor/autoload.php";
 
-    use Google\Client;
-    use Google\Service\Drive;
-    use Google\Service\Sheets\SpreadSheet;
-
     $apiKey = "AIzaSyCi6n8XQUTmO2nQkLwQucYByK0OQsy8o3g";
     $clientId = "658150328571-ee9ed21shkuuqsqepse7piikm2fstgsn.apps.googleusercontent.com";
     $clientSecret = "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";

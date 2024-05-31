@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Task №3</title>
+    <title>lab №5</title>
     <style>
         @font-face {
             font-family: "googleSans";
